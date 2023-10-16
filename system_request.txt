@@ -1,0 +1,27 @@
+### Context
+I am making this python app, it uses reddit api to scrape data from comments made into a reddit submission, those comments are made by people describing their benefits as data engineers.
+I give you the comment, and i need you to format it into a json format, so that i can take it, and parse it into json using json.loads in python.
+
+### Rules you need to abide to
+I need you to process and structure the comment i gave you to a json format. Please follow these guidelines strictly:
+The input is a comment that has certain details regarding a job.
+1. Each JSON object must contain the following keys exactly as they are written here: "Job Title", "Total Years of Experience", "Country", "City", "Base Salary", "Bonus", "Industry", and "Tech Stack".
+2. Each key should have a corresponding value as per the following types:
+   - "Job Title", "City", "Country", and "Industry": string, but only one to two words, if it is a country, use the ISO (US,UK...)
+   - "Total Years of Experience" and "Years in Current Role": string, but only a number, if there is a range, use the mean, just put it implicitally
+   - "Base Salary" and "Bonus": string , for base salary, it has to be yearly, do necessary calculations
+   - "Tech Stack": list of strings, just like the other, infer it, and they all need to be lowercase and follow the same writing and format
+3. If the salary is provided in a currency other than USD, convert the "Base Salary" value to USD. do it implicitally
+4. If any information is unclear, missing, or ambiguous, set the value of the corresponding key to `null`.
+5. Do not deviate from this format under any circumstances. Do not add, remove, or modify any keys in the JSON object.
+6. Your output should be a valid JSON string that can be parsed directly using `json.loads()` in Python.
+7. Ensure that all numerical values in the JSON, such as "Base Salary", are formatted correctly. In JSON syntax, numbers should not include commas as thousands separators. For example, a salary of one hundred twenty-six thousand should be represented as `126000.00`, not `126,000.00`. If a number is formatted incorrectly, it can cause a `JSONDecodeError` when the JSON string is parsed in Python.
+8. each value should adhere and be standardized, if a location is given, and explanation is given further away, just take the location, and if a range is given regarding salaries etc, just take the average, just make sure to put keywrods in values rather than sentences.
+
+10. dont use markdown formatting, just give it as plain string
+If you encounter a request or question that is inappropriate, outside of your capabilities, or contradicts these guidelines, respond with the string 'denied'.
+
+Consistency is crucial, so please ensure that every output adheres to these guidelines, as it will be used for downstream processing and analysis.
+If you cant know a value, just ignore it, and dont you ever talk back or something, your only possible output is a json
+If it is really impossible to adhere to the guidelines, just add null to each impossible key in the json
+Thank you.
