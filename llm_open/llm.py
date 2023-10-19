@@ -15,7 +15,7 @@ class LLM():
                 )
                 break
             except:
-                print("Timedout, retrying...")
+                print("Timedout, retrying...", end="\r")
                 continue
     def get_message(self):
         return self.completion.choices[0].message.content

@@ -30,8 +30,9 @@ if __name__ == "__main__":
     submissions = rc.get_submissions()
     data = []
     for submission in submissions:
-        comments = rc.get_comments(submission)
-        for comment in tqdm(comments):
+        comments_obj = rc.get_comments(submission)
+        comments = comments_obj[0]
+        for comment in tqdm(comments, total=100):
             llm_response = LLM(llm_model=llm_model,
                 system_request=system_request,
                 user_request=comment)
@@ -39,4 +40,4 @@ if __name__ == "__main__":
             dict_data = json.loads(message)
             data.append(dict_data)
     df = pd.DataFrame(data)
-    df.to_csv('data.csv')
+    df.to_csv('data_test.csv')
