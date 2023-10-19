@@ -3,11 +3,11 @@
 ## Introduction
 
 This repository contains a collection of salary information and relevant data for the role of data engineering worldwide. The dataset is curated based on searches and submissions from the Reddit community, specifically the "Salary on the Data Engineering" subreddit.
-To create this dataset, I leveraged the power of OpenAI's GPT-3.5 language model using its API and praw to interact and scrape data from Reddit.
+To create this dataset, I leveraged the power of OpenAI's GPT-3.5 language model using its API, and praw, the reddit api, to interact and scrape data from Reddit.
 
-The process begins with the Python modules provided by OpenAI, allowing us to communicate with the OpenAI API and present specific prompts to the GPT-3.5 model. We utilize the use gpt to format the raw submissions into a structured JSON format, making it easier to extract and organize the relevant salary and data engineering information, transforming data from purely unstructured data into semi-structured data.
+The process begins with the Python modules provided by OpenAI, allowing us to communicate with the OpenAI API and present specific prompts to the GPT-3.5 model. We then use gpt to format the raw submissions into a structured JSON format, making it easier to extract and organize the relevant salary and data engineering information, transforming data from purely unstructured data into semi-structured data.
 
-The goal is ot, once the data is formatted, I store it in a database for further analysis and exploration. Provifing a streamlit web hosted app showcasing deep diving analysis regarding the data. This repository serves as a comprehensive resource for anyone interested in studying or analyzing data engineering market as a whole. The dataset can be utilized for various purposes.
+The goal is ot, once the data is formatted, I store it in a database for further analysis and exploration. Provifing a web hosted app showcasing deep diving analysis regarding the data. This repository serves as a comprehensive resource for anyone interested in studying or analyzing data engineering market as a whole. The dataset can be utilized for various purposes.
 
 
 
