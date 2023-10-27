@@ -2,8 +2,7 @@
 
 ## Introduction
 
-
-![Screenshot_9](https://github.com/yahiaakkazi/de-reddit-salary-analysis/assets/83475215/06fcf1db-ae48-4163-8d6d-ab6efba6a568)
+![Webapp_screen](https://github.com/yahiaakkazi/de-reddit-salary-analysis/assets/83475215/d91e033a-15b1-4421-b3e9-79d69bdfcdd7)
 
 Webapp : https://de-reddit-salary-analysis.streamlit.app/
 
