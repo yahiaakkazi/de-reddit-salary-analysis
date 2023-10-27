@@ -2,6 +2,10 @@
 
 ## Introduction
 
+
+![Screenshot_9](https://github.com/yahiaakkazi/de-reddit-salary-analysis/assets/83475215/06fcf1db-ae48-4163-8d6d-ab6efba6a568)
+
+
 This repository contains a collection of salary information and relevant data for the role of data engineering worldwide. The dataset is curated based on searches and submissions from the Reddit community, specifically the "Salary on the Data Engineering" subreddit.
 To create this dataset, I leveraged the power of OpenAI's GPT-3.5 language model using its API, and praw, the reddit api, to interact and scrape data from Reddit.
 
