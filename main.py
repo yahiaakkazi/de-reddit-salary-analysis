@@ -5,6 +5,7 @@ from tqdm import tqdm
 import pandas as pd
 from llm_open.llm import LLM
 from prawutils.reddit_client import RedditClient
+from utils.utils import extract_json
 
 config = configparser.ConfigParser()
 config.read("config.ini")
@@ -37,10 +38,15 @@ if __name__ == "__main__":
         comments = comments_obj[0]
         for comment in tqdm(comments, total=100):
             llm_response = LLM(
-                llm_model=llm_model, system_request=system_request, user_request=comment
+                llm_model=llm_model, system_request=system_request, user_request=comment, use_g4f = True
             )
             message = llm_response.get_message()
-            dict_data = json.loads(message)
+            message = extract_json(message)
+            try:
+                dict_data = json.loads(message)
+            except:
+                print(f"there were a reply problem regarding the format: \n {message}")
+                continue
             data.append(dict_data)
     df = pd.DataFrame(data)
     df.to_csv("data_test.csv")
