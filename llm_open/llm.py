@@ -33,7 +33,7 @@ class LLM:
                     continue
 
     def get_message(self) -> Optional[str]:
-        """returns the message content"""
+        """returns the reponse content"""
         if self.use_g4f:
             return self.completion
         return self.completion.choices[0].message.content
