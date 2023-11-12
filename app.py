@@ -1,13 +1,13 @@
-import math
 from typing import Union, Tuple
+import ast
 import pandas as pd
 import streamlit as st
 import plotly.graph_objects as go
-import ast
 import numpy as np
 
 
-def get_metrics(df: pd.DataFrame, country: str) -> Tuple[Union[int,str]]:
+def get_metrics(df: pd.DataFrame, country: str) -> Tuple[Union[int, str]]:
+    """Function gets metrics regarding countries"""
     result = pd.to_numeric(df[df.Country == country]["Base Salary"], errors="coerce")
     return (
         result.shape[0],
@@ -19,6 +19,7 @@ def get_metrics(df: pd.DataFrame, country: str) -> Tuple[Union[int,str]]:
 
 
 def main():
+    """Function that runs upong doing a streamlit run"""
     df = pd.read_csv("data.csv").drop(columns=["Unnamed: 0"])
 
     df_tech_stack = df[["Tech Stack"]]
