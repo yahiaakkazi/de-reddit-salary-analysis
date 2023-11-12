@@ -20,6 +20,7 @@ llm_model = config["OPENAI"]["LLM_MODEL"]
 with open("system_request.txt", "r") as file:
     system_request = file.read()
 openai.api_key = api_key
+
 if __name__ == "__main__":
     rc = RedditClient(
         client_id=client_id,
